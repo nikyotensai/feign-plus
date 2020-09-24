@@ -16,6 +16,7 @@
         <module>eureka</module>
         <module>provider</module>
         <module>consumer</module>
+        <module>consumer-plus</module>
     </modules>
 
     <build>

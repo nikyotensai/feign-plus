@@ -12,6 +12,7 @@ import org.springframework.cloud.openfeign.FeignAutoConfiguration;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
 @ConditionalOnClass(FeignClient.class)
@@ -26,6 +27,8 @@ public class FeignPlusFallbackConfiguration {
 
 
     @Bean
+    @ConditionalOnMissingBean
+    @Primary
     public DynamicTargeter dynamicTargeter() {
         return new DynamicTargeter();
     }
