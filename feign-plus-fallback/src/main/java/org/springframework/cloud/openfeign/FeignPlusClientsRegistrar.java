@@ -1,7 +1,7 @@
 package org.springframework.cloud.openfeign;
 
-import com.tensai.feign.ContextIdCreator;
-import com.tensai.feign.EnableFeignPlusClients;
+import com.github.nikyotensai.feign.ContextIdCreator;
+import com.github.nikyotensai.feign.EnableFeignPlusClients;
 import org.springframework.beans.factory.annotation.AnnotatedBeanDefinition;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.BeanDefinitionHolder;

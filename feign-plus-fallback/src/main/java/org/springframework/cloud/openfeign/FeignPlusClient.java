@@ -16,8 +16,8 @@
 
 package org.springframework.cloud.openfeign;
 
-import com.tensai.feign.fallback.DynamicFallbackFactory;
-import com.tensai.feign.fallback.configuration.FeignPlusFallbackConfiguration;
+import com.github.nikyotensai.feign.fallback.DynamicFallbackFactory;
+import com.github.nikyotensai.feign.fallback.configuration.FeignPlusFallbackConfiguration;
 import org.springframework.core.annotation.AliasFor;
 
 import java.lang.annotation.*;

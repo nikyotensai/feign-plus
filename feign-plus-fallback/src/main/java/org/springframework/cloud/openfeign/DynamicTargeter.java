@@ -1,6 +1,6 @@
 package org.springframework.cloud.openfeign;
 
-import com.tensai.feign.fallback.DynamicFallbackFactory;
+import com.github.nikyotensai.feign.fallback.DynamicFallbackFactory;
 import feign.Feign;
 import feign.Target;
 import feign.hystrix.FallbackFactory;

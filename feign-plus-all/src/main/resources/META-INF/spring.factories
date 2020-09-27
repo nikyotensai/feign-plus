@@ -1,4 +1,4 @@
 # Auto Configure
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.tensai.feign.fallback.configuration.FeignPlusFallbackConfiguration,\
-  com.tensai.feign.logger.configuration.FeignLogConfiguration
+  com.github.nikyotensai.feign.fallback.configuration.FeignPlusFallbackConfiguration,\
+  com.github.nikyotensai.feign.logger.configuration.FeignLogConfiguration

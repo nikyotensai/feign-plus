@@ -11,7 +11,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.tensai</groupId>
+    <groupId>com.github.nikyotensai</groupId>
     <artifactId>feign-plus</artifactId>
     <packaging>pom</packaging>
     <version>2.0.0.SNAPSHOT</version>
@@ -53,17 +53,17 @@
             </dependency>
 
             <dependency>
-                <groupId>com.tensai</groupId>
+                <groupId>com.github.nikyotensai</groupId>
                 <artifactId>feign-plus-fallback</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.tensai</groupId>
+                <groupId>com.github.nikyotensai</groupId>
                 <artifactId>feign-plus-logger</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.tensai</groupId>
+                <groupId>com.github.nikyotensai</groupId>
                 <artifactId>feign-plus-all</artifactId>
                 <version>${project.version}</version>
             </dependency>
