@@ -19,7 +19,6 @@
         <module>feign-plus-fallback</module>
         <module>feign-plus-logger</module>
         <module>feign-plus-all</module>
-        <module>samples</module>
     </modules>
 
     <properties>
