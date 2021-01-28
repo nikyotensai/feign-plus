@@ -29,7 +29,7 @@
         <lombok.version>1.18.8</lombok.version>
         <powermock.version>1.7.4</powermock.version>
         <easymock.version>3.4</easymock.version>
-        <revision>2.0.0</revision>
+        <revision>2.1.0-SNAPSHOT</revision>
     </properties>
 
     <scm>
