@@ -49,6 +49,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.*;
 
+@SuppressWarnings("all")
 public class FeignPlusClientsRegistrar
         implements ImportBeanDefinitionRegistrar, ResourceLoaderAware, EnvironmentAware {
 
@@ -56,7 +57,7 @@ public class FeignPlusClientsRegistrar
 
     private Environment environment;
 
-    ContextIdCreator contextIdCreator;
+    private ContextIdCreator contextIdCreator;
 
     public FeignPlusClientsRegistrar() {
         ServiceLoader<ContextIdCreator> loader = ServiceLoader.load(ContextIdCreator.class);

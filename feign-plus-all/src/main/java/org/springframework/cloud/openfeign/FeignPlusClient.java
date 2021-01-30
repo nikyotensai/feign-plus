@@ -15,8 +15,8 @@
  */
 package org.springframework.cloud.openfeign;
 
+import com.github.nikyotensai.feign.configuration.FeignPlusConfiguration;
 import com.github.nikyotensai.feign.fallback.DynamicFallbackFactory;
-import com.github.nikyotensai.feign.fallback.configuration.FeignPlusFallbackConfiguration;
 import org.springframework.core.annotation.AliasFor;
 
 import java.lang.annotation.*;
@@ -24,7 +24,7 @@ import java.lang.annotation.*;
 /**
  * This class is same as {@link FeignClient}.It is used for creating feign-plus environment to simplify configuration.
  *
- * @author tensai
+ * @author nikyotensai
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
@@ -88,7 +88,7 @@ public @interface FeignPlusClient {
      * @return list of configurations for feign client
      * @see FeignClientsConfiguration for the defaults
      */
-    Class<?>[] configuration() default FeignPlusFallbackConfiguration.class;
+    Class<?>[] configuration() default FeignPlusConfiguration.class;
 
     /**
      * Fallback class for the specified Feign client interface. The fallback class must

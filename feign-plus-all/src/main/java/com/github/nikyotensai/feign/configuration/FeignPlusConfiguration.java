@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.nikyotensai.feign.fallback.configuration;
+package com.github.nikyotensai.feign.configuration;
 
 import com.github.nikyotensai.feign.fallback.DynamicFallbackFactory;
 import com.github.nikyotensai.feign.fallback.proxy.ProxyBuilder;
@@ -33,7 +33,7 @@ import org.springframework.context.annotation.Primary;
 @ConditionalOnClass(FeignClient.class)
 @AutoConfigureAfter(FeignAutoConfiguration.class)
 @ConditionalOnProperty(value = {"feignPlus.fallback.enabled"}, matchIfMissing = true)
-public class FeignPlusFallbackConfiguration {
+public class FeignPlusConfiguration {
 
     @Bean
     public FallbackFactory fallbackFactory(ProxyBuilder feignFallbackProxyBuilder) {

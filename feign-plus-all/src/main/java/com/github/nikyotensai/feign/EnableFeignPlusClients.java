@@ -1,12 +1,12 @@
 /**
  * Copyright (c) 2020-2050 NikyoTensai
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -15,7 +15,7 @@
  */
 package com.github.nikyotensai.feign;
 
-import com.github.nikyotensai.feign.fallback.configuration.FeignPlusFallbackConfiguration;
+import com.github.nikyotensai.feign.configuration.FeignPlusConfiguration;
 import org.springframework.cloud.openfeign.FeignPlusClient;
 import org.springframework.cloud.openfeign.FeignPlusClientsRegistrar;
 import org.springframework.context.annotation.Import;
@@ -29,7 +29,7 @@ import java.lang.annotation.*;
  * {@link org.springframework.context.annotation.Configuration}
  * <code>@Configuration</code> classes.
  *
- * @author tensai
+ * @author nikyotensai
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
@@ -75,7 +75,7 @@ public @interface EnableFeignPlusClients {
      * {@link feign.codec.Decoder}, {@link feign.codec.Encoder}, {@link feign.Contract}.
      *
      * @return list of default configurations
-     * @see FeignPlusFallbackConfiguration for the defaults
+     * @see FeignPlusConfiguration for the defaults
      */
     Class<?>[] defaultConfiguration() default {};
 
