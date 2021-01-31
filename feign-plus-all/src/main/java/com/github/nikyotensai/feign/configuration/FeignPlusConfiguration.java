@@ -20,7 +20,6 @@ import com.github.nikyotensai.feign.fallback.proxy.ProxyBuilder;
 import feign.hystrix.FallbackFactory;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.cloud.openfeign.DynamicTargeter;
 import org.springframework.cloud.openfeign.FeignAutoConfiguration;
@@ -36,20 +35,21 @@ import org.springframework.context.annotation.Primary;
 public class FeignPlusConfiguration {
 
     @Bean
+    @ConditionalOnClass(DynamicFallbackFactory.class)
     public FallbackFactory fallbackFactory(ProxyBuilder feignFallbackProxyBuilder) {
         return new DynamicFallbackFactory(feignFallbackProxyBuilder);
     }
 
 
     @Bean
-    @ConditionalOnMissingBean
+    @ConditionalOnClass(DynamicTargeter.class)
     @Primary
     public DynamicTargeter dynamicTargeter() {
         return new DynamicTargeter();
     }
 
     @Bean
-    @ConditionalOnMissingBean
+    @ConditionalOnClass(ProxyBuilder.class)
     public ProxyBuilder feignFallbackProxyBuilder() {
         return new ProxyBuilder();
     }
